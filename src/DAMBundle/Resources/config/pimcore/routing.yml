@@ -1,0 +1,5 @@
+dam:
+    resource: "@DAMBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

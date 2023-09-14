@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example</title>
+    <!-- Include jQuery and DataTables -->
+</head>
+<body>
+<style type="text/css">
+    /* CSS styles go here */
+    .product-list {
+        overflow-x: auto;
+    }
+
+    table {
+        width: auto; /* Allow the table to expand horizontally */
+        min-width: 100%; /* Ensure the table takes up the entire available width */
+        border-collapse: collapse;
+        white-space: nowrap;
+    }
+
+    th, td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+</style>
+
+<div id="site">
+    <div class="product-list">
+        <h2>Object Listing</h2>
+        <table id="objectTable">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <!-- Add more fields as necessary -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for object in data %}
+                    <tr>
+                        <td>{{ object.id }}</td>
+                        <td>{{ object.product_name }}</td>
+                        <td>{{ object.description }}</td>
+                        <!-- Add more fields as necessary -->
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!-- Your JavaScript code goes here -->
+
+</body>
+</html>
